@@ -12,7 +12,7 @@ class Program
 
         Comissoes();
         Estoque();
-        Juros(); // Nova chamada
+        Juros();
     }
 
     static void Comissoes()
@@ -50,10 +50,10 @@ class Program
         Console.WriteLine("--- CÁLCULO DE JUROS ---");
         var jurosService = new JurosService();
         
-        // Simulação 1: Boleto vencido há 10 dias
+        // Boleto vencido há 10 dias
         jurosService.CalcularJuros(1000.00m, DateTime.Today.AddDays(-10));
         
-        // Simulação 2: Boleto em dia (vence amanhã)
+        // Boleto em dia (vence amanhã)
         jurosService.CalcularJuros(1500.50m, DateTime.Today.AddDays(1));
     }
 }
